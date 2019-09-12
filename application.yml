@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  application:
+    name: generatetemplate-dev
+  profiles: dev
+
+---
+spring:
+  application:
+    name: generatetemplate-test
+  profiles: test
+
+---
+spring:
+  application:
+    name: generatetemplate-prod
+  profiles: prod

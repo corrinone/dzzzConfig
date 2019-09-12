@@ -1,0 +1,42 @@
+server:
+  port: 20662
+  servlet:
+    context-path: /generatetemplateconsumer
+
+spring:
+  application:
+    name: generatetemplateconsumer
+  #feign相关begin
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #feign相关end
+  
+  profiles: dev
+  
+#feign相关
+feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+  httpclient:
+    connection-timeout: 30000
+    
+logging:
+  pattern:
+    console: time %d{yyyy/MM/dd-HH:mm:sss} [%thread] %-5level %logger- %msg%n
+    file: time %d{yyyy/MM/dd} [%thread] %-5level %logger- %msg%n
+  path: logs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eurekaserver/eureka
+info:
+  author: corrin
+  version: 0.0.1
+  date: 2019-09-07
