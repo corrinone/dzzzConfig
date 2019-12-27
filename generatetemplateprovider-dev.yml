@@ -10,9 +10,6 @@ spring:
 
   data:
     mongodb:
-      source:
-        uri: mongodb://license:linewell_license123@10.6.90.8:27017,10.6.90.1:27017/license?authSource=admin&replicaSet=zzmongo&authMechanism=SCRAM-SHA-1&minPoolSize=3&maxPoolSize=10&w=1&readPreference=secondaryPreferred&connectTimeoutMS=300000
-      dest:
         uri: mongodb://license:linewell_license123@10.6.90.6:27017,10.6.90.3:27017/license?authSource=admin&replicaSet=zzmongo&authMechanism=SCRAM-SHA-1&minPoolSize=3&maxPoolSize=10&w=1&readPreference=secondaryPreferred&connectTimeoutMS=300000
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
