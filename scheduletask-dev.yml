@@ -1,0 +1,24 @@
+server:
+  port: 20664
+  servlet:
+    context-path: /scheduletask
+
+spring:
+  application:
+    name: scheduletask
+  profiles: dev
+
+logging:
+  pattern:
+    console: time %d{yyyy/MM/dd-HH:mm:sss} [%thread] %-5level %logger- %msg%n
+    file: time %d{yyyy/MM/dd} [%thread] %-5level %logger- %msg%n
+  path: logs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eurekaserver/eureka
+info:
+  author: corrin
+  version: 0.0.1
+  date: 2019-09-07
