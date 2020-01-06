@@ -20,7 +20,10 @@ spring:
     database: mysql
     generate-ddl: false
     show-sql: true
-  
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
 
 logging:
   pattern:
