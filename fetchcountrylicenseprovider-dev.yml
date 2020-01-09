@@ -1,0 +1,32 @@
+server:
+  port: 20664
+  servlet:
+    context-path: /fetchcountrylicenseprovider
+
+spring:
+  application:
+    name: fetchcountrylicenseprovider
+  profiles: dev
+
+  data:
+    mongodb:
+      uri: mongodb://license:linewell_license123@10.6.90.97:27017/license?authSource=admin&authMechanism=SCRAM-SHA-1&minPoolSize=3&maxPoolSize=10&w=1&connectTimeoutMS=300000
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+logging:
+  pattern:
+    console: time %d{yyyy/MM/dd-HH:mm:sss} [%thread] %-5level %logger- %msg%n
+    file: time %d{yyyy/MM/dd} [%thread] %-5level %logger- %msg%n
+  path: logs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eurekaserver/eureka
+info:
+  author: corrin
+  version: 0.0.1
+  date: 2020-01-09
