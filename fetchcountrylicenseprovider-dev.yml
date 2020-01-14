@@ -10,6 +10,9 @@ spring:
 
   activemq:
     broker-url: tcp://10.6.90.83:61616
+  jms:
+    template:
+      default-destination: countrylicense
 
   data:
     mongodb:
