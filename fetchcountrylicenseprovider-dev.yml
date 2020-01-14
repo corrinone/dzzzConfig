@@ -8,6 +8,9 @@ spring:
     name: fetchcountrylicenseprovider
   profiles: dev
 
+  activemq:
+    broker-url: tcp://10.6.90.83:61616
+
   data:
     mongodb:
       uri: mongodb://license:linewell_license123@10.6.90.97:27017/license?authSource=admin&authMechanism=SCRAM-SHA-1&minPoolSize=3&maxPoolSize=10&w=1&connectTimeoutMS=300000
