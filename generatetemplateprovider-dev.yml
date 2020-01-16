@@ -10,6 +10,8 @@ spring:
 
   activemq:
     broker-url: tcp://10.6.90.83:61616
+    packages:
+      trusted: com.corrin.dzzz.fetchcountrylicenseprovider.bean.BornCountryLicense
   jms:
     template:
       default-destination: countrylicense
